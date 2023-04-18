@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.astratech'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.9.1'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation 'javax.json:javax.json-api:1.1.4'
+
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+
+    implementation 'com.yashoid:jsonparsable:1.0.4'
+    implementation 'com.github.gv2011:gsoncore:0.10'
+    implementation 'com.github.gv2011:gsoncore-parent:0.8'
+    compileOnly('jakarta.servlet:jakarta.servlet-api:5.0.0')
+    implementation 'org.json:json:20211205'
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}
+
+test {
+    useJUnitPlatform()
+}

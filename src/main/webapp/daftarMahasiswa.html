@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Mahasiswa</title>
+</head>
+<body bgcolor="#33ECFF">
+<center>
+    <h3>Daftar Mahasiswa</h3>
+    <form action="MahasiswaServlet" method="post">
+        <table>
+            <tr>
+                <td>NIM</td>
+                <td><input type="text" name="nim"></td>
+            </tr>
+            <tr>
+                <td>Nama Mahasiswa</td>
+                <td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Program Studi:</td>
+                <td>
+                    <select name="prodi" id="prodiMahasiswa">
+                        <option value="P4">Pembuatan Peralatan Perkakas dan Produksi</option>
+                        <option value="TPM">Teknik Proses dan Manufaktur</option>
+                        <option value="MI">Manajemen Informatika</option>
+                        <option value="MO">Mesin Otomotif</option>
+                        <option value="MK">Mekatronika</option>
+                        <option value="TKBG">Teknik Konstruksi Bangunan dan Gedung</option>
+                        <option value="TRPAB">Teknik Rekayasa Peralatan Alat Berat</option>
+                        <option value="TL">Teknik Logistik</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Simpan"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
